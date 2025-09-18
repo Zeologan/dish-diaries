@@ -1,0 +1,37 @@
+<div class="recipes-container">
+    <h2>Try Our New Recipe</h2>
+    <div class="recipes-grid">
+        <div class="recipe-card" *ngFor="let item of recipes()">
+            <div class="recipe-image-container">
+                <div class="recipe-image">
+                    <img [src]="item.image" alt="">
+                </div>
+            </div>
+            <div class="recipe-info">
+                <div>
+                    <p>{{item.name}}</p>
+                    <ul class="rating">
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-regular fa-star"></i></li>
+                        <li>(7 Reviews)</li>
+                    </ul>
+                </div>
+                <div class="recipe-info-footer">
+                    <p>{{item.mins}}min</p>
+                    <div class="read-more">
+                        <button [routerLink]="['/recipe',item.id]">View Recipe</button>
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-solid fa-trash" (click)="deleteRecipe(item.id)"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Error Message  -->
+        <!-- <div *ngIf="error" class="error-message">
+            {{ error }}
+        </div> -->
+    </div>
+</div>

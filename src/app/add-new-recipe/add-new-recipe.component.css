@@ -1,0 +1,80 @@
+.add-recipe {
+    width: 380px;
+    padding: 30px;
+    box-shadow: rgba(255, 255, 255, 0.16) 0px 1px 4px;
+    border-radius: 20px;
+    background-image: linear-gradient(120deg, #fcfdfb 0%, #ebedee 100%);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+.add-recipe h2 {
+    text-align: center;
+    color: #77b105;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    position: relative;
+}
+.add-recipe .box{
+    display: flex;
+    gap: 10px;
+  }
+.add-recipe input {
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    background-color: #fff;
+    margin-bottom: 10px;
+    transition: transform 0.2s ease;
+
+    &:hover {
+        transform: scale(1.01);
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    }
+}
+
+textarea {
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    resize: none;
+}
+
+button{
+    font-weight: 600;
+    color: #fff;
+    margin-top: 7px;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #77b105;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    &:hover{
+        transform: scale(1.05);
+        background-color: #80bd05;
+    }
+}
+
+.fa-circle-xmark{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    color: #77b105;
+    transition: transform 0.3s ease;
+    &:hover{
+        transform: scale(1.2) rotate(180deg);
+        color: #89cb05;
+    }
+}   

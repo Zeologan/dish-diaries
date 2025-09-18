@@ -1,0 +1,25 @@
+.rating-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+.emoji-rating{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+.emoji-rating i{
+    color: #77AA11;
+    transition: all .3s;
+    &:hover{
+        transform: scale(1.1) rotate(360deg);
+        color: #77AA11;
+    }
+}
+p:last-child{
+    font-size: 12px;
+}

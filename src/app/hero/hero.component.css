@@ -1,0 +1,55 @@
+.hero-section{
+    margin: 5rem;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.slogan h2{
+    font-size: 64px;
+    line-height: 1.1;
+}
+
+.slogan-text{
+    padding: 1rem 20%;
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+img{
+    margin: 20px 0 0;
+    width: 60%;
+    height: 60%;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        margin: 4rem 0;
+    }
+
+    .slogan h2 {
+        font-size: 48px;
+    }
+
+    .slogan-text {
+        padding: 1rem 10%;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .slogan h2 {
+        font-size: 36px;
+    }
+
+    .slogan-text {
+        padding: 1rem 5%;
+        font-size: 0.8rem;
+    }
+
+    img{
+        margin: 10px 0 0;
+        width: 80%;
+        height: 80%;
+    }
+}

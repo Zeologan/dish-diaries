@@ -1,0 +1,27 @@
+<div class="login-container">
+    <div class="login">
+        <div class="login-heading">
+            <h1>Welcome Back</h1>
+            <p>Please Enter your Account Details</p>
+        </div>
+        <form (submit)="onSubmit()">
+            <div class="auth">
+                <label for="username">Username</label>
+                <input type="text" placeholder="foodie@123" [(ngModel)]="username" name="username" required>
+            </div>
+            <div class="auth">
+                <label for="password">Password</label>
+                <input type="password" placeholder="**********" [(ngModel)]="password" name="password" required>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <div class="social-media">
+            <i class="fa-brands fa-google"></i>
+            <i class="fa-brands fa-github"></i>
+            <i class="fa-brands fa-facebook"></i>
+        </div>
+    </div>
+    <div class="login-img" appHoverEffect>
+        <img src="https://images.unsplash.com/photo-1494390248081-4e521a5940db?q=80&w=2006&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+    </div>
+</div>

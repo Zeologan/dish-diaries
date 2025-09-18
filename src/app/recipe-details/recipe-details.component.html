@@ -1,0 +1,30 @@
+    <!-- if only there is a recipe available -->
+    <h1>Recipe</h1>
+    <div class="recipe-container" *ngIf="recipeDetails$ | async as recipeDetails"> 
+        <div class="recipe-img" appHoverEffect>
+            <img src="{{recipeDetails.bgImage}}" alt="">
+        </div>
+        <div class="recipe-info">
+            <ul>
+                <li><i class="fa-solid fa-seedling"></i></li>
+                <li><i class="fa-solid fa-pepper-hot"></i></li>
+                <li><i class="fa-solid fa-shrimp"></i></li>
+                <li><i class="fa-solid fa-champagne-glasses"></i></li>
+                <li><i class="fa-solid fa-bowl-rice"></i>
+                
+                </li>
+            </ul>
+            <div class="info">
+                <h3>{{recipeDetails.name}}</h3>
+                <p>{{recipeDetails.recipe}}</p>
+                <div class="like">
+                    <p>{{recipeDetails.mins}}mins</p><i class="fa-regular fa-heart"></i>
+                </div>
+            </div>
+            <div class="more-details">
+                <button routerLink="ingredients"><i class="fa-solid fa-utensils"></i>Ingredients</button>
+                <button routerLink="ratings"><i class="fa-solid fa-star"></i>Rating</button>
+            </div>
+        </div>
+    </div>
+    <router-outlet></router-outlet>

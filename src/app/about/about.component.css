@@ -1,0 +1,22 @@
+.about{
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+h2{
+    font-size:  48px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+p{
+    font-size: 12px;
+    line-height: 1.2;
+}
+
+ul>li{
+    margin-left: 40px;
+    list-style-type: disc;
+    font-size: 11px;
+}

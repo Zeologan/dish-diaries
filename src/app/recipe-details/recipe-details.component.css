@@ -1,0 +1,122 @@
+h1{
+  font-size: 48px;
+  font-weight: 600;
+  margin: 20px 0;
+  text-align: center;
+}
+.recipe-container {
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+  }
+  ul {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  ul > li {
+    display: inline-block;
+    margin-right: 30px;
+    color: #143D01;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  ul > li:hover {
+    transform: translateY(-10px) scale(1.1);
+    color: #77AA11;
+  }
+  
+  .recipe-img {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+  
+  .recipe-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .recipe-info {
+    padding: 30px 30px 40px;
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+  
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .info p {
+    font-size: 12px;
+    transition: 0.2s;
+    &:hover {
+      transform: translateX(10px);
+    }
+  }
+  
+  .like {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #143D01;
+    font-weight: 600;
+  }
+  .like i {
+    color: #143D01;
+    transition: transform 0.6s ease, color 0.3s ease;
+  }
+  .like i:hover {
+    transform: translateY(-10px) scale(1.2) rotate(360deg);
+    color: #77AA11;
+  }
+  
+  /* Switch between regular and solid on hover */
+  .like i:hover::before {
+    content: "\f004"; /* Font Awesome solid heart unicode */
+    font-weight: 900; /* Solid */
+  }
+
+  .like i::before {
+    content: "\f004"; /* Font Awesome regular heart unicode */
+    font-weight: 400; /* Regular */
+  }
+
+  .more-details{
+    display: flex;
+    margin-top: 15px;
+    gap: 10px;
+  }
+  .more-details button{
+    border: none;
+    font-size: 10px;
+    padding: 10px 12px;
+    border-radius: 30px;
+    background-color: #77AA11;
+    color: #fff;
+    transition: 0.2s;
+    font-weight: 600;
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+  .more-details i{
+    margin-right: 10px;
+    transition: 0.3s;
+    &:hover {
+      transform: rotate(360deg) scale(1.2);
+    }
+  }
+  @media (max-width: 480px) {
+    ul > li {
+      display: none;
+    }
+  }
+  

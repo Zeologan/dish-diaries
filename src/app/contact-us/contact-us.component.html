@@ -1,0 +1,71 @@
+<div class="contact-container">
+  <div class="contact-info">
+    <div class="contact-info-heading">
+      <h2>Contact Us</h2>
+      <p>Email call, or complete the form to learn how snappy can solve your messaging problem.</p>
+      <p>info&#64;dishdiaries.io</p>
+      <p>911-922-999</p>
+      <p>Customer Support</p>
+    </div>
+    <div class="contact-img" appHoverEffect>
+      <img
+        src="https://images.unsplash.com/photo-1476837579993-f1d3948f17c2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="">
+    </div>
+    <div class="contact-info-details">
+      <div class="contact-box">
+        <h4>Customer Support</h4>
+        <p>We provide reliable customer support to assist with any queries, concerns, or issues, ensuring a
+          smooth and satisfying experience for all clients with prompt and effective resolutions.</p>
+      </div>
+      <div class="contact-box">
+        <h4>Feedback</h4>
+        <p>Your feedback and suggestions are valuable to us. We actively listen to enhance our services and
+          create a better experience tailored to meet customer needs and preferences.</p>
+      </div>
+      <div class="contact-box">
+        <h4>Media Inquires</h4>
+        <p>For press or media-related inquiries, our team is available to provide information, schedule
+          interviews, or collaborate on opportunities, ensuring timely and professional responses.</p>
+      </div>
+    </div>
+  </div>
+  <div class="contact-form">
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <h2>Get in Touch</h2>
+      <p>You can reach us anytime</p>
+
+      <!-- Full Name -->
+      <input type="text" formControlName="fullName" placeholder="Full Name">
+      <small *ngIf="contactForm.get('fullName')?.invalid && contactForm.get('fullName')?.touched">Please enter your full
+        name</small>
+
+      <!-- Email -->
+      <input type="email" formControlName="email" placeholder="Your email">
+      <small *ngIf="contactForm.get('email')?.errors?.['required'] && contactForm.get('email')?.touched">Please enter
+        your email</small>
+      <small *ngIf="contactForm.get('email')?.errors?.['invalidEmail'] && contactForm.get('email')?.touched">Please enter a
+        valid email</small>
+
+      <!-- Phone Numbers -->
+      <div formArrayName="phoneNumbers">
+        <div class="phone-box" *ngFor="let phoneControl of phoneNumbers.controls; let i = index" [formGroupName]="i">
+          <input type="number" formControlName="phoneNumber" placeholder="Phone number">
+          <small *ngIf="phoneControl.invalid && phoneControl.touched">Please enter your phone number</small>
+          <i class="fa-solid fa-circle-minus" (click)="removePhoneNumberField(i)" *ngIf="phoneNumbers.length > 1"></i>
+        </div>
+      </div>
+      <i class="fa-solid fa-plus" (click)="addPhoneNumberField()"></i>
+
+      <!-- Message -->
+      <textarea formControlName="message" placeholder="How can we help?"></textarea>
+      <small *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">Please enter a
+        message</small>
+
+      <button type="submit">Submit</button>
+
+      <p>By contacting us, you agree to our <b>Terms of service</b> and <b>Privacy Policy</b></p>
+    </form>
+  </div>
+
+</div>

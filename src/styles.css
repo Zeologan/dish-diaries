@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", system-ui;
+    list-style-type: none;
+    scroll-behavior: smooth;
+}
+section{
+    padding: 20px 10%;
+}
+
+body{
+    color: #fff;
+    height: 100%;
+    background: #000; /* Set the background color to black */
+    background-image: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+    background-size: cover; /* Set the size of the dust particles */
+    background-position: center; /* Set the position of the dust particles */
+}

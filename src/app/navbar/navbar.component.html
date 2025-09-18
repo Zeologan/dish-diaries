@@ -1,0 +1,23 @@
+<nav>
+  <h1>Dish Diaries</h1>
+  <ul>
+    <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+    <li><a routerLink="/recipe" routerLinkActive="active">Recipe</a></li>
+    <li><a routerLink="/contact-us" routerLinkActive="active">Contact Us</a></li>
+    <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+  </ul>
+  
+  <div class="login">
+    <i class="fa-solid fa-plus" *ngIf="userService.isAuthenticated()" (click)="toggleAddRecipe()"></i>
+    <i class="fa-regular fa-heart" *ngIf="userService.isAuthenticated()"><p>2</p></i>
+    <h5 (click)="toggleActive()" *ngIf="!userService.isAuthenticated()">Sign In</h5>
+    <h5 (click)="toggleActive()" *ngIf="userService.isAuthenticated()">Sign Out</h5>
+    <div class="user" *ngIf="userService.isAuthenticated()">
+      <img src="https://img.freepik.com/free-photo/portrait-female-tourist-visiting-great-wall-china_23-2151261823.jpg?t=st=1725359937~exp=1725363537~hmac=c0230809dbce58a6869cac1dba6c48e7871a96dca03e70ec7d1f384e766b72ae&w=360" alt="">
+    </div>
+  </div>
+</nav>
+
+<!-- Conditionally display the AddNewRecipeComponent -->
+<app-add-new-recipe *ngIf="addrecipe.isAddRecipeVisible"></app-add-new-recipe>
+  

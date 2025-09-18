@@ -1,0 +1,51 @@
+footer{
+    padding: 3rem 0 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+.address{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.info-box{
+    font-size: 10px;
+}
+p{
+    line-height: 2;
+    transition: all .2s;
+}
+
+p:hover{
+    transform: translateX(3px);
+}
+
+.info-box p:first-child{
+    font-weight: 600;   
+}
+
+.help{
+    display: flex;
+    gap: 40px;
+}
+.help p{
+    line-height: 3;
+
+}
+.info-box i{
+    font-size: 18px;
+    line-height: 2;
+    transition: all .2s;
+    cursor: pointer;
+    &:hover{
+        transform: translateX(3px);
+        color: #2BF21E;
+    }
+}
+
+@media (max-width: 480px) {
+    footer{
+        flex-direction: column;
+    }
+}

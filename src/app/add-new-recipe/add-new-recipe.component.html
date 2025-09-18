@@ -1,0 +1,18 @@
+<div class="add-recipe">
+    <h2>Add Your Taste</h2>
+    <form [formGroup]="recipeForm" (ngSubmit)="onSubmit()">
+        <input type="text" formControlName="recipeName" placeholder="Recipe Name">
+        <div class="box">
+            <input type="number" formControlName="time" placeholder="Mins">
+            <input type="text" formControlName="image" placeholder="Image">
+        </div>
+        <input type="text" formControlName="recipeImage" placeholder="Image Url">
+        <textarea formControlName="recipe" placeholder="Recipe"></textarea>
+        <button type="submit" [disabled]="!recipeForm.valid">Save</button>
+    </form>
+    <i class="fa-solid fa-circle-xmark" (click)="toggleAddRecipe()"></i>
+</div>
+
+<!-- [(ngModel)]="newEmployee.id" -->
+<!-- (submit)="onSubmit()" -->
+<!-- *ngIf="isAddRecipeVisible" -->

@@ -1,0 +1,99 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h1{
+    font-weight: 600;
+}
+ul li {
+    display: inline-block;
+    margin: 14px;
+    font-size: 12px;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+ul li:hover {
+    transform: scale(1.1);
+}
+ul li a.active {
+    color: #2BF21E;
+    transform: scale(1.1);
+}
+ul li:hover a {
+    color: #2BF21E;
+}
+
+.login{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.login h5{
+    cursor: pointer;
+}
+.fa-plus{
+    cursor: pointer;
+}
+.login i{
+    position: relative;
+}
+.login p{
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    font-size: 8px;
+    font-weight: 800;
+    padding: 3px 5px;
+    border-radius: 40px;
+    background-color: #2BF21E;
+}
+.user{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #2BF21E;
+    overflow: hidden;
+}
+.user img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+@media (max-width: 768px) {
+
+    ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+    .login{
+        gap: 10px;
+    }
+    .login h5{
+        font-size: 14px;
+    }
+    .user{
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .user{
+        width: 20px;
+        height: 20px;
+    }
+    .login h5{
+        font-size: 14px;
+    }
+}
